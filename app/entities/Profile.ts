@@ -11,6 +11,6 @@ export default class Profile {
     public createdAt: string;
     @Column({name:"updated_at"})
     public updatedAt: string;
-    @OneToMany( type => User, user => user.profileId)
+    @OneToMany( type => User, user => user.profile,{ eager: true})
     public users: User[];
 }

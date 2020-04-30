@@ -33,7 +33,7 @@ __decorate([
     __metadata("design:type", String)
 ], Profile.prototype, "updatedAt", void 0);
 __decorate([
-    typeorm_1.OneToMany(type => User_1.default, user => user.profileId),
+    typeorm_1.OneToMany(type => User_1.default, user => user.profile, { eager: true }),
     __metadata("design:type", Array)
 ], Profile.prototype, "users", void 0);
 Profile = __decorate([

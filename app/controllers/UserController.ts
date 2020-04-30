@@ -1,6 +1,5 @@
 import { Request,Response } from "express";
-import { getRepository } from "typeorm";
-import Profile from "../entities/Profile";
+import { getRepository, Column } from "typeorm";
 import User from "../entities/User";
 export default {
     async get(req:Request,res:Response){

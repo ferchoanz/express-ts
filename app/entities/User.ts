@@ -14,7 +14,7 @@ export default class User {
     public createdAt: string;
     @Column({name: 'updated_at'})
     public updateAt: string;
-    @ManyToOne(type => Profile, profile => profile.id)
-    @JoinColumn({name:'profile_id'})
+    @ManyToOne(type => Profile, profile => profile.users,{eager: false, lazy: true})
+    @JoinColumn({name:'profile_id',referencedColumnName:"id"})
     public profile: Profile;
 }

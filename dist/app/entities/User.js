@@ -41,7 +41,7 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "updateAt", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => Profile_1.default, profile => profile.id),
+    typeorm_1.ManyToOne(type => Profile_1.default, profile => profile.users, { eager: false, lazy: true }),
     typeorm_1.JoinColumn({ name: 'profile_id' }),
     __metadata("design:type", Profile_1.default)
 ], User.prototype, "profile", void 0);
